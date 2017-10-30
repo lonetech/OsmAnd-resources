@@ -29,8 +29,10 @@ string('route_calculate.ogg', 'Ny väg beräknad').
 string('distance.ogg', ', resan är ').
 
 % LEFT/RIGHT
+% "om" translates to "if", but in sequential instructions it's closer to after. 
 string('after.ogg', 'Om ').
-string('in.ogg', 'i ').
+% "in" can translate to "i" if it means inside. But the phrases I encountered this were "turn right in 50m". 
+string('in.ogg', 'om ').
 
 string('left.ogg', 'sväng vänster').
 string('left_sh.ogg', 'sväng skarpt vänster').
@@ -38,6 +40,8 @@ string('left_sl.ogg', 'sväng svagt vänster').
 string('right.ogg', 'sväng höger').
 string('right_sh.ogg', 'sväng skarpt höger').
 string('right_sl.ogg', 'sväng lätt höger').
+% These may be tricky. "håll åt" means hold to a particular side of the road. 
+% The instructions are more like following a particular branch. 
 string('left_keep.ogg', 'håll åt vänster').
 string('right_keep.ogg', 'håll åt höger').
 string('left_bear.ogg', 'håll åt vänster').  % in English the same as left_keep, may be different in other languages
@@ -55,7 +59,10 @@ string('then.ogg', ', sedan ').
 string('and.ogg', ' och ').
 string('take.ogg', 'ta den ').
 string('exit.ogg', 'utfarten').
-
+% Exit counting is decent (if clumsy) for cars, almost unusable for bikes. 
+% The issue is that bike lanes are frequently distinct and we get crazy 
+% instructions like cross the first exit, drive back into the roundabout 
+% then take the first exit. The relative heading would be much better. 
 string('1st.ogg', 'första ').
 string('2nd.ogg', 'andra ').
 string('3rd.ogg', 'tredje ').
@@ -79,14 +86,17 @@ string('go_ahead.ogg', 'Kör rakt fram').
 string('follow.ogg', 'Följ den här vägen ').
 
 % ARRIVE
-string('and_arrive_destination.ogg', 'och du är framme ').
+% "är framme" is present tense.
+string('and_arrive_destination.ogg', 'och du når fram ').
 string('reached_destination.ogg','du är framme ').
 string('and_arrive_intermediate.ogg', 'och anländer till din via-punkt ').
 string('reached_intermediate.ogg', 'du har nått din via-punkt ').
 
 % NEARBY POINTS
+% Someone explain why these speak of GPX?
 string('and_arrive_waypoint.ogg', 'och anländer till din via-punkt GPX ').
 string('reached_waypoint.ogg', 'du har nått din via-punkt GPX ').
+% ... TODO. These are clearly residual English but I don't see how the phrase fits. 
 string('and_arrive_favorite.ogg', 'and pass favorite ').
 string('reached_favorite.ogg', 'you are passing favorite ').
 string('and_arrive_poi.ogg', 'and pass POI ').
@@ -95,25 +105,30 @@ string('reached_poi.ogg', 'you are passing POI ').
 % ATTENTION
 %string('exceed_limit.ogg', 'du överskrider hastighetsgränsen ').
 string('exceed_limit.ogg', 'hastighetsbegränsning ').
-string('attention.ogg', 'uppmärksamhet, ').
+% Weird form. "uppmärksamhet" is the noun attention, not the imperative. 
+string('attention.ogg', 'Varning! ').
 string('speed_camera.ogg', 'fartkamera').
 string('border_control.ogg', 'gränskontroll').
 string('railroad_crossing.ogg', 'järnvägskorsning').
-string('traffic_calming.ogg', 'trafik lugnande').
-string('toll_booth.ogg', 'vägtullen').
-string('stop.ogg', 'Stopp skylt').
-string('pedestrian_crosswalk.ogg', 'fotgängare övergångsställe').
+string('traffic_calming.ogg', 'farthinder').
+string('toll_booth.ogg', 'vägtull').
+string('stop.ogg', 'Stoppskylt').
+% Most of our crosswalks are for pedestrians?
+string('pedestrian_crosswalk.ogg', 'övergångsställe').
 
 % OTHER PROMPTS
 string('location_lost.ogg', 'GPS-signalen borttappad').
-string('location_recovered.ogg', 'GPS-signalen återvinnas').
+% Had the wrong tense. "återvinnas" is the "recycled" in "plastic bottles can be recycled".
+string('location_recovered.ogg', 'GPS-signalen återfunnen').
 string('off_route.ogg', 'du har avvikit från rutten ').
 string('back_on_route.ogg', 'du är tillbaka på vägen').
 
 % STREET NAME PREPOSITIONS
-string('onto.ogg', 'på ').
+% Nope, "på" means on. As in, OsmAnd kept telling me "follow this road <distance> on <next road>". 
+% This could probably still use some improvement...
+string('onto.ogg', 'till ').
 string('on.ogg', 'på ').
-string('to.ogg', 'på ').
+string('to.ogg', 'till ').
 string('toward.ogg', 'mot ').
 
 % DISTANCE UNIT SUPPORT
@@ -122,10 +137,12 @@ string('around_1_kilometer.ogg', 'ungefär en kilometer').
 string('around.ogg', 'ungefär ').
 string('kilometers.ogg', ' kilometer').
 
-string('feet.ogg', 'fod').
-string('1_tenth_of_a_mile.ogg', 'en tiondel av en mil').
-string('tenths_of_a_mile.ogg', 'tiondelar av en mil').
-string('around_1_mile.ogg', 'cirka en mil').
+% "fod" was just a weird misspelling.
+string('feet.ogg', 'fot').
+% a swedish "mil" is 10km, not a mile.
+string('1_tenth_of_a_mile.ogg', 'en tiondel av en mile').
+string('tenths_of_a_mile.ogg', 'tiondelar av en mile').
+string('around_1_mile.ogg', 'cirka en mile').
 string('miles.ogg', 'miles').
 
 string('yards.ogg', 'yards').
